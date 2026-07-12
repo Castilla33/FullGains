@@ -1,6 +1,6 @@
 # Personal Use and Non-Commercial License
 
-Copyright (c) [YEAR] [YOUR NAME]. All rights reserved.
+Copyright (c) 2026 Mario Castilla. All rights reserved.
 
 ## 1. Grant of License
 Permission is hereby granted to any person obtaining a copy of this software and associated documentation files (the "Software"), to use and modify the Software solely for personal, private, and non-commercial purposes. 
