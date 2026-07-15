@@ -17,24 +17,20 @@ export default function tarjetaRutina() {
 
 const styles = StyleSheet.create({
   rutinaCard: {
-    flex: 1,
-    fontSize: "350%",
     backgroundColor: "light-gray",
-    marginHorizontal: "13%",
+    marginHorizontal: 35,
     borderColor: "gray",
-    padding: "2%",
+    padding: 10,
     borderWidth: 5,
-    borderColor: "gray",
   },
   nombre: {
-    fontFamily: "Arial",
     fontWeight: "bold",
-    fontSize: "50%",
+    fontSize: 25,
+    marginInlineStart: 5,
   },
   descripcion: {
-    fontFamily: "Arial",
-    padding: "2%",
-    fontSize: "30%"
+    padding: 10,
+    fontSize: 15
   } 
 
 })

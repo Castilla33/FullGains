@@ -12,11 +12,10 @@ export default function Inicio() {
 
 const styles = StyleSheet.create({
   titulo: {
-    flex: 1,
-    fontFamily: "Arial",
+    fontSize: 35,
     fontWeight: "bold",
-    fontSize: "350%",
     textAlign: "center",
-    padding: "2%",
+    padding: 20,
+    marginTop: 30,
   }
 })
