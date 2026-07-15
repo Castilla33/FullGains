@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text } from "react-native";
-import BotonRutina from "../components/BotonRutina";
+import BotonRutina from "../components/tarjetaRutina";
 
 export default function Inicio() {
   return (

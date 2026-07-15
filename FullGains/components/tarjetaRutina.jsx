@@ -1,7 +1,7 @@
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
-export default function BotonRutina() {
+export default function tarjetaRutina() {
     return (
         <Pressable
             onPress= {() => router.push("/perfil")}
