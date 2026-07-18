@@ -2,9 +2,9 @@ import { View, TextInput, Button } from "react-native";
 import { useState } from "react";
 import { router } from "expo-router";
 
-import { crearRutina } from "../database/repositories/RutinaRepository";
+import { crearRutina } from "../database/repositories/RoutineRepository";
 
-export default function CrearRutina() {
+export default function createRoutine() {
 
     const [nombre, setNombre] = useState("");
     const [descripcion, setDescripcion] = useState("");

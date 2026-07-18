@@ -1,6 +1,6 @@
 import db from "../database";
 
-export function crearRutina(nombre, descripcion){
+export function createRoutine(nombre, descripcion){
 
     db.runSync(
 
@@ -13,7 +13,7 @@ export function crearRutina(nombre, descripcion){
 }
 
 
-export function obtenerRutinas(){
+export function getRoutines(){
 
     const resultado = db.getAllSync(
 
@@ -25,7 +25,7 @@ export function obtenerRutinas(){
 
 }
 
-export function borrarRutina(id){
+export function delRoutines(id){
 
     db.runSync(
 
@@ -37,7 +37,7 @@ export function borrarRutina(id){
 
 }
 
-export function actualizarRutina(id,nombre,descripcion){
+export function updateRoutines(id,nombre,descripcion){
 
     db.runSync(
 
