@@ -1,22 +1,23 @@
-import { View, StyleSheet, Text } from "react-native";
-import BotonRutina from "../components/BotonRutina";
+import { getRoutines } from "../database/repositories/RoutineRepository"
+import { Button } from "react";
+import { router } from "expo-router";
 
-export default function Inicio() {
-  return (
-    <View>
-      <Text style={styles.titulo}>Rutinas</Text>
-      <BotonRutina/>
-    </View>
-  );
+export default function index() {
+
+    const routineCheck = getRoutines();
+
+    if (routineCheck.length === 0) {
+
+    return (
+        <>
+            <Text>No tienes rutinas</Text>
+            <Button/>
+        </>
+    );
+
 }
 
-const styles = StyleSheet.create({
-  titulo: {
-    flex: 1,
-    fontFamily: "Arial",
-    fontWeight: "bold",
-    fontSize: "350%",
-    textAlign: "center",
-    padding: "2%",
-  }
-})
+return (
+    router.replace("/routinesScreen1")
+);
+}
