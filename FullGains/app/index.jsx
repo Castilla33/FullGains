@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text } from "react-native";
-import RoutineCard from "../components/routineCard";
+import RoutineCard from "../components/RoutineCard";
 
 export default function Index() {
     return (
