@@ -1,5 +1,6 @@
 import { View, StyleSheet, Text } from "react-native";
 import RoutineCard from "../components/RoutineCard";
+import AddButton from "../components/AddButton";
 import { getRoutines } from "../database/repositories/RoutineRepository";
 
 export default function Index() {
@@ -25,14 +26,15 @@ export default function Index() {
 
     return (
 
-        <View>
+        <View style={styles.container}>
 
             <Text style={styles.title}>
                 Rutinas
             </Text>
 
-            {tarjetas}
+            {tarjetas};
 
+           <AddButton />
         </View>
 
     );
@@ -40,6 +42,10 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+
     title: {
         fontSize: 35,
         fontWeight: "bold",
