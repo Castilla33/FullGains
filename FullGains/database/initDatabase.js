@@ -7,5 +7,7 @@ export default function initDatabase() {
             nombre TEXT NOT NULL,
             descripcion TEXT
         );
+
+        DELETE FROM Rutina;
     `);
 }
