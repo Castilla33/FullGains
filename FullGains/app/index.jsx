@@ -1,23 +1,21 @@
-import { getRoutines } from "../database/repositories/RoutineRepository"
-import { Button } from "react";
-import { router } from "expo-router";
+import { View, StyleSheet, Text } from "react-native";
+import RoutineCard from "../components/routineCard";
 
-export default function index() {
-
-    const routineCheck = getRoutines();
-
-    if (routineCheck.length === 0) {
-
+export default function Index() {
     return (
-        <>
-            <Text>No tienes rutinas</Text>
-            <Button/>
-        </>
+        <View>
+            <Text style={styles.title}>Rutinas</Text>
+            <RoutineCard />
+        </View>
     );
-
 }
 
-return (
-    router.replace("/routinesScreen1")
-);
-}
+const styles = StyleSheet.create({
+    title: {
+        fontSize: 35,
+        fontWeight: "bold",
+        textAlign: "center",
+        padding: 20,
+        marginTop: 30,
+    },
+});
