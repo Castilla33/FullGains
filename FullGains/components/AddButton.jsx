@@ -1,6 +1,5 @@
-import { Pressable, Text, StyleSheet, View } from "react-native";
 import { router } from "expo-router";
-import { bundledExtensions } from "expo-sqlite";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function AddButton() {
 
@@ -8,7 +7,7 @@ export default function AddButton() {
 
         <Pressable
             style={styles.button}
-            onPress={() => router.push("/createRoutine")}
+            onPress={() => router.push("/addRoutineScreen")}
         >
             <View>
                 <Text style={styles.text}>+</Text>

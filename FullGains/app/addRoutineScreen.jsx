@@ -1,23 +1,25 @@
-import { View, TextInput, Pressable, StyleSheet, Text } from "react-native";
-import { useState } from "react";
 import { router } from "expo-router";
+import { useState } from "react";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
 import { createRoutine } from "../database/repositories/RoutineRepository";
 
-export default function routineDataInsert() {
+export default function addRoutineScreen() {
 
-    const [nombre, setNombre] = useState("");
-    const [descripcion, setDescripcion] = useState("");
+    const [routineName, setRoutineName] = useState("");
+    const [routineDescription, setRoutineDescription] = useState("");
 
     function saveRoutine() {
 
-        if (nombre == "") {
-            console.log("Error");
+        if (routineName == "") {
+            console.log("Declare routine name");
         } else {
 
-            createRoutine(nombre, descripcion);
+            createRoutine(routineName, routineDescription);
 
             router.replace("/");
+
+            console.log({routineName});
 
         }
         
@@ -39,8 +41,8 @@ export default function routineDataInsert() {
             <TextInput
                 style={styles.input}
                 placeholder="Introduce el nombre de la rutina..."
-                value={nombre}
-                onChangeText={setNombre}
+                value={routineName}
+                onChangeText={setRoutineName}
             />
 
             <Text style={styles.header}>
@@ -50,8 +52,8 @@ export default function routineDataInsert() {
             <TextInput
                 style={styles.input}
                 placeholder="Introduce una descripción a la rutina"
-                value={descripcion}
-                onChangeText={setDescripcion}
+                value={routineDescription}
+                onChangeText={setRoutineDescription}
             />
 
             <View style={styles.subContainer}>

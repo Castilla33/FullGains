@@ -1,7 +1,7 @@
-import { View, Pressable, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function RoutineCard({ id, nombre, descripcion }) {
+export default function RoutineCard({ id, routineName, routineDescription}) {
 
     return (
         <Pressable
@@ -10,12 +10,12 @@ export default function RoutineCard({ id, nombre, descripcion }) {
         >
             <View>
 
-                <Text style={styles.routineName}>
-                    {nombre}
+                <Text style={styles.routineNameStyle}>
+                    {routineName}
                 </Text>
 
-                <Text style={styles.routineDesc}>
-                    {descripcion}
+                <Text style={styles.routineDescriptionStyle}>
+                    {routineDescription}
                 </Text>
 
             </View>
@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         marginVertical: 10,
     },
-    routineName: {
+    routineNameStyle: {
         fontWeight: "bold",
         fontSize: 25,
         marginStart: 5,
     },
-    routineDesc: {
+    routineDescriptionStyle: {
         padding: 10,
         fontSize: 15,
     },

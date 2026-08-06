@@ -1,23 +1,23 @@
-import { View, StyleSheet, Text, ScrollView } from "react-native";
-import RoutineCard from "../components/RoutineCard";
+import { ScrollView, StyleSheet, Text } from "react-native";
 import AddButton from "../components/AddButton";
+import RoutineCard from "../components/RoutineCard";
 import { getRoutines } from "../database/repositories/RoutineRepository";
 
 export default function Index() {
 
-    const rutinas = getRoutines();
+    const routines = getRoutines();
 
-    const tarjetas = [];
+    const cardArray = [];
 
-    for (let i = 0; i < rutinas.length; i++) {
+    for (let i = 0; i < routines.length; i++) {
 
-        tarjetas.push(
+        cardArray.push(
 
             <RoutineCard
-                key={rutinas[i].id}
-                id={rutinas[i].id}
-                nombre={rutinas[i].nombre}
-                descripcion={rutinas[i].descripcion}
+                key={routines[i].id}
+                id={routines[i].id}
+                routineName={routines[i].routineName}
+                routineDescription={routines[i].routineDescription}
             />
 
         );
@@ -26,29 +26,30 @@ export default function Index() {
 
     return (
         <>
-        <ScrollView style={styles.container}>
+            <ScrollView style={styles.indexContainer}>
 
-            <Text style={styles.title}>
-                Rutinas
-            </Text>
+                <Text style={styles.indexTitle}>
+                    Rutinas
+                </Text>
 
-            {tarjetas};
+                {cardArray};
 
-           
-        </ScrollView>
-        <AddButton />
+            </ScrollView>
+
+            <AddButton />
+
         </>
     );
 
 }
 
 const styles = StyleSheet.create({
-    container: {
+    indexContainer: {
         flex: 1,
 
     },
 
-    title: {
+    indexTitle: {
         fontSize: 35,
         fontWeight: "bold",
         textAlign: "center",
