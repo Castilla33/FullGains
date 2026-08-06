@@ -11,9 +11,16 @@ export default function routineDataInsert() {
 
     function saveRoutine() {
 
-        createRoutine(nombre, descripcion);
+        if (nombre == "") {
+            console.log("Error");
+        } else {
 
-        router.replace("/");
+            createRoutine(nombre, descripcion);
+
+            router.replace("/");
+
+        }
+        
 
     }
 
@@ -55,7 +62,9 @@ export default function routineDataInsert() {
                         <Text style={styles.buttonText}>
                             Guardar    
                         </Text>   
-                    </Pressable>   
+                    </Pressable>
+
+                    <Text></Text>   
             </View>
 
             

@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, ScrollView } from "react-native";
 import RoutineCard from "../components/RoutineCard";
 import AddButton from "../components/AddButton";
 import { getRoutines } from "../database/repositories/RoutineRepository";
@@ -25,8 +25,8 @@ export default function Index() {
     }
 
     return (
-
-        <View style={styles.container}>
+        <>
+        <ScrollView style={styles.container}>
 
             <Text style={styles.title}>
                 Rutinas
@@ -34,9 +34,10 @@ export default function Index() {
 
             {tarjetas};
 
-           <AddButton />
-        </View>
-
+           
+        </ScrollView>
+        <AddButton />
+        </>
     );
 
 }
