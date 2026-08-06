@@ -27,9 +27,10 @@ const styles = StyleSheet.create({
     routineCardBox: {
         backgroundColor: "lightgray",
         marginHorizontal: 35,
-        borderColor: "gray",
+        borderColor: "black",
         padding: 10,
-        borderWidth: 5,
+        borderWidth: 2,
+        marginVertical: 10,
     },
     routineName: {
         fontWeight: "bold",

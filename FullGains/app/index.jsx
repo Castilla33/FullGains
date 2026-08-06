@@ -44,6 +44,7 @@ export default function Index() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+
     },
 
     title: {
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         padding: 20,
-        marginTop: 30,
+        top: 30,
+        marginBottom: 25,
     },
 });
