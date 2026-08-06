@@ -1,7 +1,7 @@
 import { View, Pressable, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
-export default function RoutineCard() {
+export default function RoutineCard({ id, nombre, descripcion }) {
 
     return (
         <Pressable
@@ -9,10 +9,15 @@ export default function RoutineCard() {
             style={styles.routineCardBox}
         >
             <View>
-                <Text style={styles.routineName}>Rutina 1</Text>
-                <Text style={styles.routineDesc}>
-                    Esta es la descripción de la única rutina
+
+                <Text style={styles.routineName}>
+                    {nombre}
                 </Text>
+
+                <Text style={styles.routineDesc}>
+                    {descripcion}
+                </Text>
+
             </View>
         </Pressable>
     );
@@ -22,9 +27,10 @@ const styles = StyleSheet.create({
     routineCardBox: {
         backgroundColor: "lightgray",
         marginHorizontal: 35,
-        borderColor: "gray",
+        borderColor: "black",
         padding: 10,
-        borderWidth: 5,
+        borderWidth: 2,
+        marginVertical: 10,
     },
     routineName: {
         fontWeight: "bold",
