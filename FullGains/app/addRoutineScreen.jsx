@@ -19,8 +19,6 @@ export default function addRoutineScreen() {
 
             router.replace("/");
 
-            console.log({routineName});
-
         }
         
 

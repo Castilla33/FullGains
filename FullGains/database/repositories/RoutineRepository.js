@@ -1,12 +1,12 @@
 import db from "../database";
 
-export function createRoutine(routineName, rotuineDescription){
+export function createRoutine(routineName, routineDescription){
 
     db.runSync(
 
-        "INSERT INTO Rutina(routineName, rotuineDescription) VALUES (?,?)",
+        "INSERT INTO Routine(routineName, routineDescription) VALUES (?,?)",
 
-        [routineName, rotuineDescription]
+        [routineName, routineDescription]
 
     );
 
@@ -17,7 +17,7 @@ export function getRoutines(){
 
     const routines = db.getAllSync(
 
-        "SELECT * FROM Rutina"
+        "SELECT * FROM Routine"
 
     );
 
@@ -25,25 +25,25 @@ export function getRoutines(){
 
 }
 
-export function delRoutines(id){
+export function delRoutines(routineId){
 
     db.runSync(
 
-        "DELETE FROM Rutina WHERE id=?",
+        "DELETE FROM Routine WHERE routineId=?",
 
-        [id]
+        [routineId]
 
     );
 
 }
 
-export function updateRoutines(id,routineName, rotuineDescription){
+export function updateRoutines(routineId, routineName, routineDescription){
 
     db.runSync(
 
-        "UPDATE Rutina SET routineName=?, rotuineDescription=? WHERE id=?",
+        "UPDATE Routine SET routineName=?, routineDescription=? WHERE routineId=?",
 
-        [routineName,rotuineDescription,id]
+        [routineName,routineDescription,routineId]
 
     );
 

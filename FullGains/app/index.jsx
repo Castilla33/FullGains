@@ -14,8 +14,8 @@ export default function Index() {
         cardArray.push(
 
             <RoutineCard
-                key={routines[i].id}
-                id={routines[i].id}
+                key={routines[i].routineId}
+                routineId={routines[i].routineId}
                 routineName={routines[i].routineName}
                 routineDescription={routines[i].routineDescription}
             />

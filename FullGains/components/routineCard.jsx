@@ -1,11 +1,16 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function RoutineCard({ id, routineName, routineDescription}) {
+export default function RoutineCard({ routineId, routineName, routineDescription}) {
 
     return (
         <Pressable
-            onPress={() => router.push("/dayScreen")}
+            onPress={() => router.push({
+                pathname: "/daysScreen",
+                params: {
+                    routineId: routineId
+                }
+            })}
             style={styles.routineCardBox}
         >
             <View>
